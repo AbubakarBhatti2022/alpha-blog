@@ -1,5 +1,17 @@
 <h1>Create a New Article</h1>
 
+
+<% if @article.errors.any? %>
+<h2>the following error prevented the article from being saved</h2>
+<ol>
+<% @article.errors.full_messages.each do |msg|%>
+<li> <%= msg%> </li>
+
+<% end  %> 
+</ol>
+    
+<% end  %> 
+
 <%= form_with scope: :article, url: articles_path, local: true do |f| %>
 
 <p>
