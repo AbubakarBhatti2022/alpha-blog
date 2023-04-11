@@ -8,12 +8,12 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%# <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %> 
+    <%# <%= javascript_include_tag 'rails-ujs', 'turbolinks' %>   
+
   </head>
 
   <body>
-  <% flash.each do |name, msg| %>
-<%= msg%>
-  <%end%>
+  <%= render 'layouts/messages' %>
     <%= yield %>
   </body>
 </html>
