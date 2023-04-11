@@ -1,6 +1,29 @@
-<h2> home page </h2>
-
-<%= link_to 'Article Listing', articles_path %> |
-<%= link_to 'About', about_path %>
+        <div id="page-content">
+        
 
 
+            <div class="container-fluide mx-5 my-5" id="home-container">
+
+            <div class="jumbotron px-5">
+            <h1 class="display-4">Alpha Blogs</h1>
+            <p class="lead">AlphaBlog is a popular online platform for bloggers to publish and share their articles 
+            on various topics ranging from lifestyle, travel, technology, business, and more.</p>
+            <hr class="my-2">
+            <p>With its user-friendly interface and powerful content management system, AlphaBlog offers bloggers 
+            the flexibility to create and customize their blogs 
+            to suit their needs and preferences while also providing a vast audience base for their content.</p>
+            
+            <div class="d-flex">
+            <%= link_to 'Article Listing', articles_path, class: "btn btn-primary mx-2" %>
+        <%= link_to 'Home', root_path, class: "btn btn-primary mx-2" %>
+        </div>
+            
+            </div>
+            </div>
+            </div>
+
+        <footer id="sticky-footer" class="flex-shrink-0 py-4 bg-dark text-white">
+            <div class="container text-center">
+            <small >Copyright &copy; <%= link_to 'Bookerlay', "http://bookarley.com", class: 'text-white fw-bold fs-6' %> </small>
+            </div>
+        </footer>
