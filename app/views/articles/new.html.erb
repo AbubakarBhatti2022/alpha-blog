@@ -1,4 +1,24 @@
+<div class="mx-5">
+<div class="text-center mt-5">
 <h1>Create a New Article</h1>
+</div>
+
+
+
+
+
+<%# form code
+<div class="mb-3">
+  <label for="formGroupExampleInput" class="form-label">Example label</label>
+  <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input placeholder">
+</div>
+<div class="mb-3">
+  <label for="formGroupExampleInput2" class="form-label">Another label</label>
+  <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input placeholder">
+</div> %>
+
+
+
 
 
 <% if @article.errors.any? %>
@@ -12,19 +32,27 @@
     
 <% end  %> 
 
-<%= form_with scope: :article, url: articles_path, local: true do |f| %>
+<%= form_with(model: @article, local: true) do |f| %>
 
 <p>
-<%= f.label :title %><br/>
-<%= f.text_field :title%>
+<%= f.label :title, class: 'form-label' %><br/>
+<%= f.text_field :title, class: 'form-control' %>
 </p>
 <p>
-<%= f.label :description %><br/>
-<%= f.text_area :description %>
+<%= f.label :description, class: 'form-label'%><br/>
+<%= f.text_area :description, class: 'form-control' %>
 </p>
 <p>
-<%= f.submit %>
+<%= f.label :image %><br/>
+  <%= f.file_field :image %>
 </p>
-<%= link_to 'Cancel & Return to Article Listing', articles_path %>
+<p class="my-5">
+<%= f.submit class: 'btn' %>
+<%= link_to 'Cancel & Return to Article Listing', articles_path, class: 'btn mx-3' %>
+</p>
+
 
 <% end %>
+
+
+</div>

@@ -1,8 +1,20 @@
-<h2> showing article details </h2>
 
-<p> <strong>Title: </strong> <%= @article.title %> </p>
-<p> <strong>Description: </strong> <%= @article.description %></p>
+ <div class="container-fluide mx-5 my-5 " id="home-container">
 
-<%= link_to 'Edit', edit_article_path(@article) %> | 
-<%= button_to 'Delete', article_path(@article), method: :delete, data: {confirm: "Are you Sure?"}  %> |
-<%= link_to 'Return to article Listing', articles_path %>
+            <div class="jumbotron show-jumbotron px-5">
+            <h1 class="display-4">Article Details </h1>
+            <p> <strong>Title: </strong> <%= @article.title %> </p>
+            <p> <strong>Description: </strong> <%= @article.description %></p>
+            
+            <div class="d-flex mt-3">
+            <%= link_to 'Edit', edit_article_path(@article), class: "btn btn-primary mx-2" %> 
+<%= button_to 'Delete', article_path(@article), method: :delete, data: {confirm: "Are you Sure?"} , class: "btn btn-primary mx-2" %>
+<%= link_to 'Return to Article Listing', articles_path, class: "btn btn-primary mx-2" %>
+        </div>
+            
+            </div>
+            </div>
+
+
+
+

@@ -1,4 +1,8 @@
+
+<div class="mx-5">
+<div class="text-center mt-5">
 <h1>Edit the Article</h1>
+</div>
 
 
 <% if @article.errors.any? %>
@@ -15,15 +19,20 @@
 <%= form_with(model: @article, local: true) do |f| %>
 
 <p>
-<%= f.label :title %><br/>
-<%= f.text_field :title%>
+<%= f.label :title, class: 'form-label' %><br/>
+<%= f.text_field :title, class: 'form-control'%>
 </p>
 <p>
-<%= f.label :description %><br/>
-<%= f.text_area :description %>
+<%= f.label :description, class: 'form-label' %><br/>
+<%= f.text_area :description, class: 'form-control' %>
 </p>
 <p>
-<%= f.submit %>
+<%= f.label :image %><br/>
+  <%= f.file_field :image %>
+</p>
+<p>
+<%= f.submit class: 'btn' %>
 </p>
 
 <% end %>
+</div>
