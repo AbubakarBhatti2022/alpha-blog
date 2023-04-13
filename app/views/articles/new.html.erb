@@ -3,34 +3,7 @@
 <h1>Create a New Article</h1>
 </div>
 
-
-
-
-
-<%# form code
-<div class="mb-3">
-  <label for="formGroupExampleInput" class="form-label">Example label</label>
-  <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Example input placeholder">
-</div>
-<div class="mb-3">
-  <label for="formGroupExampleInput2" class="form-label">Another label</label>
-  <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Another input placeholder">
-</div> %>
-
-
-
-
-
-<% if @article.errors.any? %>
-<h2>the following error prevented the article from being saved</h2>
-<ol>
-<% @article.errors.full_messages.each do |msg|%>
-<li> <%= msg%> </li>
-
-<% end  %> 
-</ol>
-    
-<% end  %> 
+<%= render 'shared/error' %>
 
 <%= form_with(model: @article, local: true) do |f| %>
 

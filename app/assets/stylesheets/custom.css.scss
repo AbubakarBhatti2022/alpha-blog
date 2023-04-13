@@ -1,5 +1,9 @@
 @import 'bootstrap/dist/css/bootstrap';
 
+form.d-flex {
+  margin-bottom: 0 !important;
+}
+
 #home-container{
     background-image: asset-url('hsbg.jpg');
     background-repeat: no-repeat;
@@ -60,11 +64,7 @@ body {
 }
 
 #sticky-footer{
-    // position: fixed !important;
-//    left: 0 !important;
-//    bottom: 0 !important;
    width: 100% !important;
-   
    color: white !important;
    text-align: center !important;
    margin-top: auto;
@@ -74,7 +74,11 @@ body {
     height: 500px; /* adjust as needed */
   }
  
-
+  button.close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
 /* button CSS */
 .btn {
   align-items: center;

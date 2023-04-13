@@ -9,5 +9,5 @@ DRY Dont repeat you self
 -code redundancy
 Add boostrap
 design home page using bootstrap
-add image dynamicaly using active storage
+add functionalty to post image dynamicaly using active storage
 * ...
