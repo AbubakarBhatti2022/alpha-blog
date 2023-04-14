@@ -6,6 +6,7 @@
       format: { with: URI::MailTo::EMAIL_REGEXP, message: "must be a valid email address" }, 
       length: { maximum: 105 }
       has_many :articles  
+      has_secure_password
     
   end
     
