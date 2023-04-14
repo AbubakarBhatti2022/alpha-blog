@@ -1,5 +1,22 @@
 @import 'bootstrap/dist/css/bootstrap';
 
+html,
+body {
+  height: 100%;
+
+}
+p{
+  margin-bottom: 0px;
+}
+
+.card.mb-4 {
+  min-height: 100%;
+}
+
+.column{
+  margin-bottom: 25px;
+}
+
 form.d-flex {
   margin-bottom: 0 !important;
 }
@@ -51,11 +68,7 @@ border-radius: 10px;
     color: white;
 }
 
-html,
-body {
-  height: 100%;
 
-}
 
 #page-content {
   flex: 1 0 auto;
@@ -70,10 +83,14 @@ body {
    margin-top: auto;
 }
 
-.card {
-    height: 500px; /* adjust as needed */
-  }
  
+  p.author {
+    text-transform: capitalize;
+    font-weight: 600;
+    font-size: 20px;
+    padding-bottom: 10px;
+}
+
   button.close {
     position: absolute;
     top: 20px;
