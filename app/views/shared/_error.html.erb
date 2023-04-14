@@ -1,7 +1,7 @@
 <% if obj.errors.any? %>
 
 <div class="alert alert-success alert-dismissible fade show" role="alert">
-  <h4 class="alert-heading">The Following Error Prevented The Article From Being Saved</h4>
+  <h4 class="alert-heading">The Following Error Prevented The <%= obj.class%> From Being Saved</h4>
  <hr>
  <ol>
 <% obj.errors.full_messages.each do |msg|%>
