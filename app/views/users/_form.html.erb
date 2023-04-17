@@ -13,6 +13,10 @@
 <%= f.label :password %><br/>
   <%= f.password_field :password, class: 'form-control', placeholder: 'Enter Your Password'  %>
 </p>
+<p>
+<%= f.label :image %><br/>
+  <%= f.file_field :image %>
+</p>
 <p class="my-5">
 <%= f.submit(@user.new_record? ? "Sign Up" : "Update Account", class: 'btn') %>
 <%= link_to 'Cancel & Return to Article Listing', articles_path, class: 'btn mx-3' %>

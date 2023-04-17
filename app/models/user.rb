@@ -7,6 +7,8 @@
       length: { maximum: 105 }
       has_many :articles  
       has_secure_password
+      has_one_attached :image
+    validates :image, presence: { message: "must be present" }
     
   end
     
