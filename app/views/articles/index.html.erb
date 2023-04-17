@@ -3,7 +3,21 @@
 <h2> Article Listing Page </h2>
 </div>
 
-<%= render 'article' %>
+
+
+<div class="flickr_pagination my-4">
+    
+    <%= will_paginate @articles, :container => false %>
+
+  </div><%= render 'article' %>
+
+<%# pagination %>
+
+<div class="flickr_pagination">
+    
+    <%= will_paginate @articles, :container => false %>
+  </div>
+
 
 
 <p class="mb-5">
