@@ -13,14 +13,15 @@
 
 <%# pagination %>
 
-<div class="flickr_pagination">
+<div class="flickr_pagination mb-5">
     
     <%= will_paginate @articles, :container => false %>
   </div>
 
 
-
+<% if logged_in? %>
 <p class="mb-5">
 <%= link_to 'Create New Article', new_article_path, class: 'btn' %>
 </p>
+<% end %>
 </div>
