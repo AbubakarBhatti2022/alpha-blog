@@ -29,8 +29,9 @@
                       <hr/>
                   <div class=" d-flex flex-wrap">
                       <%= link_to 'View Profile', @user, class: 'btn mx-2'  %>
-                      <%= link_to 'edit Profile', edit_user_path, class: 'btn mx-2'  %>
-
+                      <% if logged_in? && @user == current_user %>
+                      <%= link_to 'Edit Profile', edit_user_path, class: 'btn mx-2'  %>
+<%end%>
 
                   </div>
 
