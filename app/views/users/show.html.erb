@@ -1,8 +1,9 @@
 <div class="mx-5">
-  <div class="text-center">
+  <div>
+  <div class="mb-5 text-center">
     <h1 class="my-5"> <%= @user.username%>'s Profile </h1>
     <%= image_tag @user.image, class: "profile-image" %>
-   
+   </div>
     <%= render 'articles/article' %>
      <div class="flickr_pagination my-4">
     
