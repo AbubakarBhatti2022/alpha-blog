@@ -1,0 +1,32 @@
+<div class="mx-5">
+  <div class="text-center mt-5">
+    <h1>Login Alpha Blog </h1>
+  </div>
+  
+  <%# form start %>
+
+
+<%= form_with(scope: :session, url: login_path, local: true) do |f| %>
+
+<p>
+<%= f.label :email, class: 'form-label'%><br/>
+<%= f.email_field :email, class: 'form-control', placeholder: 'Enter Your Email' %>
+</p>
+<p>
+<%= f.label :password %><br/>
+  <%= f.password_field :password, class: 'form-control', placeholder: 'Enter Your Password'  %>
+</p>
+
+<p class="my-5">
+<%= f.submit 'Log In', class: 'btn' %>
+<%= link_to 'Cancel & Return to Article Listing', articles_path, class: 'btn mx-3' %>
+</p>
+
+
+<% end %>
+
+
+
+  <%# form end %>
+
+</div>
