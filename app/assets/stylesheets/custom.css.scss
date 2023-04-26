@@ -157,7 +157,20 @@ border-radius: 10px;
   height: 300px;
   width: 300px;
 }
+.user-name{
+  text-transform: capitalize;
+  color: white;
+  font-size: 22px;
+  text-decoration: underline;
+}
 
+.user-name::before{
+  font-family: "Font Awesome 6 Pro";
+  content: "\f095";
+  display: inline-block;
+  padding-right: 3px;
+  vertical-align: middle;
+}
 // pagination styling
 
 .flickr_pagination {

@@ -31,9 +31,16 @@
             <a class="nav-link text-light" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
             </li>
         </ul>
-        <%= link_to 'SignUp', signup_path, class: "nav-link active btn mx-2" %>
+        
+
+<% if logged_in? %>
+
+    <%= link_to current_user.username, user_path(current_user), class: "nav-link active user-name mx-2" %>
+       <%= link_to 'LogOut', logout_path, class: "nav-link active btn mx-2", method: :delete %>
+        <% else %>
          <%= link_to 'LogIn', login_path, class: "nav-link active btn mx-2 " %>
-         <%= link_to 'LogOut', logout_path, class: "nav-link active btn mx-2", method: :delete %>
-        </div>
+          <%= link_to 'SignUp', signup_path, class: "nav-link active btn mx-2" %>
+         <% end %>
+         </div>
     </div>
     </nav>
