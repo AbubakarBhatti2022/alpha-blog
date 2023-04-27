@@ -23,6 +23,7 @@
 <% if logged_in? %>
 <li class="nav-item dropdown userdropdown px-3">
   <a class=" dropdown-toggle text-light active-user" type="button" href="#"   id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+   <%= "Admin:" if current_user.admin? %>
    <%= current_user.username %>
   </a>
   <div class="dropdown-menu" >
