@@ -61,7 +61,7 @@ end
 
 def require_same_user
     if current_user != @user && !current_user.admin?
-        flash[:notice] = "You can only Edit and Update your own Account"
+        flash[:alert] = "You can only Edit and Update your own Account"
         redirect_to @user
     end
 end
