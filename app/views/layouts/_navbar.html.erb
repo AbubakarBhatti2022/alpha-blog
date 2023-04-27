@@ -14,19 +14,6 @@
             <li class="nav-item">
             <%= link_to 'Bloggers', users_path, class: "nav-link text-light"  %>
             </li>
-            <li class="nav-item dropdown">
-
-           <div class="dropdown">
-  <span class="nav-link dropdown-toggle text-light" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-    Dropdown button
-  </span>
-  <ul class="dropdown-menu">
-    <li><a class="dropdown-item" href="#">Action</a></li>
-    <li><a class="dropdown-item" href="#">Another action</a></li>
-    <li><a class="dropdown-item" href="#">Something else here</a></li>
-  </ul>
-</div>
-            </li>
             <li class="nav-item">
             <a class="nav-link text-light" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
             </li>
@@ -34,8 +21,17 @@
         
 
 <% if logged_in? %>
+<li class="nav-item dropdown userdropdown px-3">
+  <a class=" dropdown-toggle text-light active-user" type="button" href="#"   id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+   <%= current_user.username %>
+  </a>
+  <div class="dropdown-menu" >
+   <%= link_to "View Your Profile", user_path(current_user), class: "dropdown-item " %>
+      <%= link_to "Edit Profile", edit_user_path(current_user), class: "dropdown-item"  %>
+   <%= button_to "Delete Profile", user_path(current_user), class: "dropdown-item text-danger", method: :delete, data: {confirm: "Are You Sure"} %>
+  </div>
 
-    <%= link_to current_user.username, user_path(current_user), class: "nav-link active user-name mx-2" %>
+</li>
        <%= link_to 'LogOut', logout_path, class: "nav-link active btn mx-2", method: :delete %>
         <% else %>
          <%= link_to 'LogIn', login_path, class: "nav-link active btn mx-2 " %>

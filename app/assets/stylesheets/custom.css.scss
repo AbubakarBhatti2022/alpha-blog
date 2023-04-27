@@ -152,26 +152,23 @@ border-radius: 10px;
   width: 100px;
   border-radius: 50%;
 }
-// .user-profile-index{
-  
-//     display: flex;
-//     justify-content: center;
-//     background: linear-gradient(to right, #FF6666 30%, #99CC99 30%);
-
-// }
-
-// .user-index-card{
-//   background: none;
-// }
+.userdropdown {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.dropdown-menu.show {
+  top: 35px;
+}
 
 .profile-image{
   height: 300px;
   width: 300px;
 }
-.user-name{
+.active-user{
   text-transform: capitalize;
   color: white;
-  font-size: 22px;
+  font-size: 18px;
   text-decoration: underline;
 }
 
