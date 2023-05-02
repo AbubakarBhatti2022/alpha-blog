@@ -1,5 +1,7 @@
 class CategoriesController < ApplicationController
 
+    before_action :require_admin
+
     def new 
         @category = Category.new
     end
@@ -30,6 +32,13 @@ class CategoriesController < ApplicationController
 
         params.require(:category).permit(:name)
 
+    end
+
+    def require_admin
+        unless current_user && current_user.admin?
+          flash[:error] = "You must be an admin to access this page."
+          redirect_to root_path
+        end
     end
 
     
