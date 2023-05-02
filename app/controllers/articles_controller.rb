@@ -20,6 +20,7 @@ before_action :require_same_user, only: [:edit, :update, :destroy]
     end
 
     def create
+        byebug
         @article = Article.new(article_params)
         @article.user = current_user
         if @article.save
@@ -56,7 +57,7 @@ end
 
 
 def article_params
-    params.require(:article).permit(:title, :description, :image)
+    params.require(:article).permit(:title, :description, :image, category_ids: [])
   end
 
 
