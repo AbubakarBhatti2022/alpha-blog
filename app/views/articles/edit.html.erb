@@ -27,6 +27,10 @@
 <%= f.text_area :description, class: 'form-control' %>
 </p>
 <p>
+<%= f.label :Category, class: 'form-label'%><br/>
+  <%= f.collection_select :category_ids, Category.all, :id, :name, {prompt: "make your selection from the list below "}, { multiple: true, size: 3, class: 'custom-select form-control' } %>
+</p>
+<p>
 <%= f.label :image %><br/>
   <%= f.file_field :image %>
 </p>

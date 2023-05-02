@@ -5,6 +5,12 @@
             <h1 class="display-4">Article Details </h1>
             <p> <strong>Title: </strong> <%= @article.title %> </p>
             <p> <strong>Description: </strong> <%= @article.description %></p>
+            <% if @article.categories.any?%>
+            <div>
+            
+             <%= render @article.categories %>
+             </div>
+            <%end%>
             <hr/>
             <% if @article.user%>
             <p class="author"> By <%= @article.user.username %> </p>

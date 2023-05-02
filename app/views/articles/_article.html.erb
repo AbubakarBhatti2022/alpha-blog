@@ -16,6 +16,12 @@
                 <div class="card-body d-flex flex-column ">
                       <h5 class="card-title"><%= article.title %></h5>
                       <p class="card-text"><%= truncate(article.description, length: 150) %></p>
+                      <% if article.categories.any?%>
+            <div>
+            
+             <%=  render article.categories %>
+             </div>
+            <%end%>
                       <hr/>
 
                       <% if article.user %>
