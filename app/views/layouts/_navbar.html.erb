@@ -14,9 +14,23 @@
             <li class="nav-item">
             <%= link_to 'Bloggers', users_path, class: "nav-link text-light"  %>
             </li>
-            <li class="nav-item">
-            <a class="nav-link text-light" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-            </li>
+            <%# category dropdown  %>
+          
+          <li class="nav-item dropdown userdropdown px-3">
+  <a class=" dropdown-toggle text-light active-user" type="button" href="#"   id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+   
+   Categories
+  </a>
+  <div class="dropdown-menu" >
+  <% if logged_in? && current_user.admin?%>
+   <%= link_to "Create New Category", new_category_path, class: "dropdown-item " %>
+     <%end%>
+      <%= link_to "View Category", categories_path, class: "dropdown-item " %>
+  </div>
+
+</li>
+
+            <%# end dropdown %>
         </ul>
         
 

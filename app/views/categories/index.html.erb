@@ -5,7 +5,7 @@
 
 
 <%# cards styling %>
-<% if logged_in?%>
+
 <div class="row d-flex flex-row ">
     <% @categories.each do |category| %>
          <div class="col-lg-3 col-md-4 col-sm-6 column">
@@ -26,7 +26,7 @@
     
     <%= will_paginate @categories, :container => false %>
     </div>
-<% end%>
+
 
 </div>
 
