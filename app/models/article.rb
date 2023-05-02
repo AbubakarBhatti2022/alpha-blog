@@ -4,5 +4,7 @@ class Article < ApplicationRecord
     has_one_attached :image
     validates :image, presence: { message: "must be present" }
     belongs_to :user
+    has_many :article_categories
+    has_many :categories, through: :article_categories
    
   end
