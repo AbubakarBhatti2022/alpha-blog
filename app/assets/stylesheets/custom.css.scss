@@ -180,22 +180,13 @@ border-radius: 10px;
   vertical-align: middle;
 }
 
-// flash messages background color styling
-
-// .flash-message {
-//   padding: 10px;
-//   margin: 10px 0;
-//   border-radius: 5px;
-//   font-weight: bold;
-// }
-
-// .alert {
-//   background-color: red; /* red color */
-// }
-
-// .notice {
-//   background-color: green; /* green color */
-// }
+.category_tags{
+  text-decoration: none;
+}
+.category_tags:hover{
+color: white;
+text-decoration: underline;
+}
 
 
 // pagination styling
