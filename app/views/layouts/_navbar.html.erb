@@ -41,6 +41,8 @@
    <%= current_user.username %>
   </a>
   <div class="dropdown-menu" >
+ <%= link_to "Download CSV", download_csv_users_path(format: :csv), class: 'dropdown-item' %>
+
    <%= link_to "View Your Profile", user_path(current_user), class: "dropdown-item " %>
       <%= link_to "Edit Profile", edit_user_path(current_user), class: "dropdown-item"  %>
    <%= button_to "Delete Profile", user_path(current_user), class: "dropdown-item text-danger", method: :delete, data: {confirm: "Are You Sure"} %>
