@@ -4,8 +4,14 @@ before_action :set_article, only: [:show, :edit, :update, :destroy]
 before_action :require_user, except: [:show, :index]
 before_action :require_same_user, only: [:edit, :update, :destroy]
 
-    def show
+def show
+    respond_to do |format|
+      format.html
+      format.pdf do
+        render pdf: "file_name", template: "articles/show.pdf.erb"   # Excluding ".pdf" extension.
+      end
     end
+  end
 
     def index 
         @articles = Article.paginate(page: params[:page], per_page: 4)

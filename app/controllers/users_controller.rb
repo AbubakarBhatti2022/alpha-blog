@@ -7,7 +7,19 @@ class UsersController < ApplicationController
     
     def show 
         @articles = @user.articles.paginate(page: params[:page], per_page: 4)
-    end
+                    
+        respond_to do |format|
+              format.html
+              format.pdf do
+                render pdf: "show",
+                disposition: 'inline',
+                stream: false,
+                layout: 'layouts/pdf.html.erb'
+              end
+            end
+          end
+
+    
 
     def index
         @users = User.paginate(page: params[:page], per_page: 6)
